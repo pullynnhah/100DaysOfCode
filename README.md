@@ -1,8 +1,8 @@
 # 100 Days of Code
 ___
-## Current @: `Day 2`
+## Current @: `Day 3`
 ___
-### [Day001]()
+### [Day001](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day001)
 ### [Day002]()
 ### [Day003]()
 ### [Day004]()
