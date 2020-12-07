@@ -5,7 +5,9 @@ Use the code given to create a rock-paper-scissors game.
 Remember the rules:
 - Rock wins from scissors.
 - Paper wins from rock.
-- Scissors win from paper. 
+- Scissors win from paper.      
+
+If the user types an invalid number (not 0, 1 or 2) catch and print an error message.
 
 # Example Output
 
