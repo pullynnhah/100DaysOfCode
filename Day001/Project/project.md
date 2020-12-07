@@ -18,4 +18,4 @@ What's your pet's name?
 > Molly Marie
 Your band name could be Itabira Molly Marie
 ```
-OBS.: '>' represents input
+OBS.: `>` represents input
