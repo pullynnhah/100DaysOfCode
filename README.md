@@ -1,6 +1,6 @@
 # 100 Days of Code
 ___
-## Current @: `Day 5`
+## Current @: `Day 6`
 ___
 ### [Day001](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day001)
 ### [Day002](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day002)
