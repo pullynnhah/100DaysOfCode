@@ -5,6 +5,7 @@ import auction_art
 def clear_screen():
     os.system("cls" if os.name == 'nt' else 'clear')
 
+
 bid_dict = {}
 another = 'yes'
 while another == 'yes':
