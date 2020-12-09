@@ -1,3 +1,6 @@
+import calc_art
+
+
 def add(a, b):
     return a + b
 
@@ -42,4 +45,5 @@ def calculator():
         num1 = result
 
 
+print(calc_art.logo)
 calculator()
