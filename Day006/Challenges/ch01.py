@@ -1,5 +1,5 @@
 # Observation: You need to run the code below on the
-# https://reeborg.ca/ website on the ch01.md file.
+# https://reeborg.ca/ website on the ch.md file.
 
 def turn_right():
     turn_left()
