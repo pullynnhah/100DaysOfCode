@@ -2,7 +2,7 @@ import random
 import turtle
 
 
-class ScoreBoard(turtle.Turtle):
+class Scoreboard(turtle.Turtle):
     ALIGNMENT = 'center'
     FONT_SCORE = ('Letters for Learners', 22, 'normal')
     FONT_GAME_OVER = ('Letters for Learners', 80, 'bold')

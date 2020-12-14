@@ -3,7 +3,7 @@ from time import sleep
 
 from snake import Snake
 from food import Food
-from scoreboard import ScoreBoard
+from scoreboard import Scoreboard
 
 WIDTH = 600
 HEIGHT = 600
@@ -16,7 +16,7 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
-score_board = ScoreBoard()
+score_board = Scoreboard()
 
 screen.listen()
 screen.onkey(snake.up, 'Up')
