@@ -1,7 +1,8 @@
 from turtle import Screen
+from time import sleep
+
 from snake import Snake
 from food import Food
-from time import sleep
 from scoreboard import ScoreBoard
 
 WIDTH = 600
@@ -30,7 +31,7 @@ while game_is_on:
     snake.move()
 
     # Detect collision with food.
-    if snake.head.distance(food) < 20:
+    if snake.head.distance(food) < 10:
         food.move()
         snake.extend()
         score_board.increase_score()
