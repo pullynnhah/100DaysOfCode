@@ -86,6 +86,7 @@ def clear_screen():
 tim = t.Turtle()
 t.colormode(255)
 canvas = t.Screen()
+canvas.title('Etch-A-Sketch')
 
 draw_board(tim, canvas)
 

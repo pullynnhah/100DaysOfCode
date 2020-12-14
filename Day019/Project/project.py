@@ -19,6 +19,7 @@ def stripe_write(turtle_object, string, font):
 t.colormode(255)
 screen = t.Screen()
 screen.setup(width=500, height=400)
+screen.title('Turtle Race')
 user_bet = screen.textinput(
     title='Make your bet',
     prompt='Which turtle will win the race? Enter a color of the rainbow: '
