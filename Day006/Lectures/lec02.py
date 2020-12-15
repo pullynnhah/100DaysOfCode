@@ -1,5 +1,5 @@
 # Observation: You need to run the codes below on the https://reeborg.ca/
-# More info is at the lec02.md file
+# More info is at the lec04.md file
 
 # First
 move()
