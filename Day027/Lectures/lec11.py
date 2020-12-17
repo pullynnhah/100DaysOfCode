@@ -22,7 +22,7 @@ def action():
 button = Button(text="Click Me", command=action, font=FONT)
 button.pack()
 
-# Entries
+# EntriesWork
 entry = Entry(width=30)
 # Add some text to begin with
 entry.insert(END, string="Some text to begin with.")
