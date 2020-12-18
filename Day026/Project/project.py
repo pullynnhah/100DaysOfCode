@@ -9,4 +9,4 @@ word = input('Enter an word: ').upper()
 spelling_word = [nato_dict[letter] for letter in word]
 
 print(f'The NATO code for {word} is:')
-print(spelling_word)
+print(' - '.join(spelling_word))
