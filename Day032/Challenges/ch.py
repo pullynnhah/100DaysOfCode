@@ -1,5 +1,6 @@
 import smtplib
 import random
+import os
 import datetime as dt
 
 weekdays = {
@@ -24,8 +25,8 @@ weekday = now.weekday()
 check_weekday = input('Enter which day of the week do you want to send an email: ').lower()
 
 if weekdays[check_weekday] == weekday:
-    email = input("Enter your gmail username: ") + '@gmail.com'
-    password = input("Enter your password: ")
+    email = os.environ["MY_EMAIL"]
+    password = os.environ["MY_EMAIL_PASSWORD"]
 
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()

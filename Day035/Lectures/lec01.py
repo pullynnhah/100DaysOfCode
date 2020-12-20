@@ -1,10 +1,10 @@
 import requests
-from sys import argv
+import os
 
 LATITUDE = -22.338930
 LONGITUDE = -49.055190
 
-api_key = argv[1]
+api_key = os.environ["OWM_API_KEY"]
 api_url = "https://api.openweathermap.org/data/2.5/onecall"
 params = {
     "lat": LATITUDE,

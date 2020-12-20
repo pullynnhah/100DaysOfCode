@@ -1,3 +1,4 @@
+import os
 import smtplib
 import requests
 from datetime import datetime
@@ -12,8 +13,9 @@ parameters = {
     "lng": LONGITUDE,
     "formatted": 0,
 }
-email = input("Enter email username: ") + "@gmail.com"
-password = input("Enter your password: ")
+
+email = os.environ["MY_EMAIL"]
+password = os.environ["MY_EMAIL_PASSWORD"]
 
 
 def check_coordinates():

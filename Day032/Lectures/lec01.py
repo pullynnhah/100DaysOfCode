@@ -1,8 +1,10 @@
 import smtplib
+import os
 
-email = input("Enter your gmail username: ") + '@gmail.com'
+email = os.environ["MY_EMAIL"]
+password = os.environ["MY_EMAIL_PASSWORD"]
+
 another_email = "another_fake_paula@yahoo.com"
-password = input("Enter your password: ")
 
 connection = smtplib.SMTP("smtp.gmail.com", port=587)
 connection.starttls()

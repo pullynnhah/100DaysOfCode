@@ -1,5 +1,4 @@
 import requests
-import sys
 import os
 from twilio.rest import Client
 

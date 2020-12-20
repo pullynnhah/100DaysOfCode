@@ -1,6 +1,7 @@
 import pandas
 import random
 import smtplib
+import os
 import datetime as dt
 
 
@@ -25,8 +26,9 @@ for person in info:
         birthday_info.append((person['name'], person['email']))
 
 if len(birthday_info) != 0:
-    my_email = input("Enter your gmail username: ") + '@gmail.com'
-    password = input("Enter your password: ")
+
+    email = os.environ["MY_EMAIL"]
+    password = os.environ["MY_EMAIL_PASSWORD"]
     for person in birthday_info:
         name = person[0]
         email = person[1]

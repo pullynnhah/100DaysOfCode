@@ -1,12 +1,12 @@
 from twilio.rest import Client
-import sys
+import os
 
-account_sid = sys.argv[1]
-auth_token = sys.argv[2]
+account_sid = os.environ["TWILIO_SID"]
+auth_token = os.environ["TWILIO_TOKEN"]
 client = Client(account_sid, auth_token)
 
-twilio_number = sys.argv[3]
-my_number = sys.argv[4]
+twilio_number = os.environ["TWILIO_NUMBER"]
+my_number = os.environ["MY_NUMBER"]
 
 message = client.messages.create(
     body="This message was send from Python!!!",

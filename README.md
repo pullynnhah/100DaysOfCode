@@ -2,6 +2,8 @@
 ___
 ## Current @: `Day 36`
 ___
+### Please, take a look at the notes in the bottom.
+___
 ## [`Day001`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day001) [`Day002`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day002) [`Day003`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day003) [`Day004`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day004) [`Day005`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day005)
 ## [`Day006`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day006) [`Day007`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day007) [`Day008`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day008) [`Day009`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day009) [`Day010`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day010)
 ## [`Day011`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day011) [`Day012`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day012) [`Day013`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day013) [`Day014`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day014) [`Day015`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day015)
@@ -22,3 +24,10 @@ ___
 ## [`Day086`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day086) [`Day087`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day087) [`Day088`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day088) [`Day089`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day089) [`Day090`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day090)
 ## [`Day091`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day091) [`Day092`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day092) [`Day093`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day093) [`Day094`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day094) [`Day095`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day095)
 ## [`Day096`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day096) [`Day097`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day097) [`Day098`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day098) [`Day099`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day099) [`Day100`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day100)
+
+___
+## NOTES:
+- Some codes for Reeborg's World won't work if you try to run in your computer. Instead, you need to copy and paste them into the appropriate world. Those codes already have the link on them.
+  
+- Starting in `Day029`, I make use of Environment Variables to protect my personal information. If you want the codes that have: `var = os.environ["VAR"]` to work you have to either create Environment Variables with those names with your information. Or replace those values with your own.
+    - I was using `input()` to prompt for the data everytime the program ran, to protect my personal information, but that was too tiresome, having to type large number of information at a time,so I switched to using environment variables.

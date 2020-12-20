@@ -1,17 +1,18 @@
+import os
 import requests
 from twilio.rest import Client
-import sys
 
-account_sid = sys.argv[1]
-auth_token = sys.argv[2]
+account_sid = os.environ["TWILIO_SID"]
+auth_token = os.environ["TWILIO_TOKEN"]
 client = Client(account_sid, auth_token)
-twilio_number = sys.argv[3]
-my_number = sys.argv[4]
+
+twilio_number = os.environ["TWILIO_NUMBER"]
+my_number = os.environ["MY_NUMBER"]
 
 LATITUDE = -22.338930
 LONGITUDE = -49.055190
 
-api_key = sys.argv[5]
+api_key = os.environ["OWM_API_KEY"]
 api_url = "https://api.openweathermap.org/data/2.5/onecall"
 params = {
     "lat": LATITUDE,
