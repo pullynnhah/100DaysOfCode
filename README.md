@@ -1,6 +1,6 @@
 # 100 Days of Code
 ___
-## Current @: `Day 35`
+## Current @: `Day 36`
 ___
 ## [`Day001`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day001) [`Day002`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day002) [`Day003`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day003) [`Day004`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day004) [`Day005`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day005)
 ## [`Day006`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day006) [`Day007`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day007) [`Day008`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day008) [`Day009`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day009) [`Day010`](https://github.com/pullynnhah/100DaysOfCode/tree/master/Day010)
