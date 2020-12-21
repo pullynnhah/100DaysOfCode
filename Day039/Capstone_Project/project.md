@@ -62,3 +62,19 @@ We're looking only for direct flights, that leave anytime between tomorrow and i
 
 Take a look at the Flight Search API to see which parameters you can pass to the API:
 [tequila api](https://tequila.kiwi.com/portal/docs/tequila_api/search_api)
+
+## Step 5 
+- If Flight Price Lower than in Google Sheet send an SMS
+The final step is to check if any of the flights found are cheaper than the Lowest Price listed in the Google Sheet. If so, then we should use the Twilio API to send an SMS with enough information to book the flight. You should use the NotificationManager for this job.
+
+Message should Include:
+
+```
+Price
+Departure City Name
+Departure Airport IATA Code
+Arrival City Name
+Arrival Airport IATA Code
+Outbound Date
+Inbound Date
+```
