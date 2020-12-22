@@ -14,6 +14,6 @@ class FlightData:
             'to': f'{self.data["cityTo"]}-{self.data["flyTo"]}',
             'price': self.data['price'],
             'departure_date': self.data['route'][0]["local_departure"].split('T')[0],
-            'return_date': return_date,
+            'arrival_date': return_date,
             'via_city': self.data['route'][0]['cityTo']
         }

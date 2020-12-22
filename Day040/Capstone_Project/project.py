@@ -1,4 +1,3 @@
-import pprint
 import datetime as dt
 import data_manager as dm
 import flight_search as fs
@@ -47,18 +46,15 @@ for row in data_manager.data['prices']:
 
 iata_codes = [row['iataCode'] for row in data_manager.data['prices']]
 
-notification_manager = nm.NotificationManager()
+notification_manager = nm.NotificationManager(nm.EMAIL, nm.PASSWORD)
 for idx, iata_code in enumerate(iata_codes):
     flight_params.update(fly_to=iata_code, max_stopovers=0)
-    print(flight_params)
     flight_search = fs.FlightSearch(fs.API_SEARCH, fs.ENDPOINT, flight_params)
     data = flight_search.data['data']
     stopped = False
     if len(data) == 0:
         flight_params.update(max_stopovers=1)
         flight_search = fs.FlightSearch(fs.API_SEARCH, fs.ENDPOINT, flight_params)
-        pp = pprint.PrettyPrinter(indent=4)
-        pp.pprint(flight_search.data['data'])
         data = flight_search.data['data']
         if len(data) == 0:
             continue
@@ -76,8 +72,8 @@ for idx, iata_code in enumerate(iata_codes):
         message += f"\nhttps://www.google.co.uk/flights?hl=en#flt="
         message += f"{flight_data.data['flyTo']}.{flight_data.data['flyFrom']}."
         message += f"{data['departure_date']}*{flight_data.data['flyFrom']}."
-        message += f"{flight_data.data['flyTo']}.{data['return_date']}"
+        message += f"{flight_data.data['flyTo']}.{data['arrival_date']}"
 
         users = dm.DataManager(dm.ENDPOINT, dm.USERS_SHEET, dm.TOKEN)
-        emails = [row['email'] for row in users.data[dm.USERS_SHEET]]
+        emails = [row['email'] for row in users.data['users']]
         notification_manager.send_email(message.encode('utf-8'), *emails)

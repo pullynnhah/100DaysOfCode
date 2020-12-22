@@ -56,8 +56,6 @@ for idx, iata_code in enumerate(iata_codes):
     if len(data) == 0:
         flight_params.update(max_stopovers=1)
         flight_search = fs.FlightSearch(fs.API_SEARCH, fs.ENDPOINT, flight_params)
-        pp = pprint.PrettyPrinter(indent=4)
-        pp.pprint(flight_search.data['data'])
         data = flight_search.data['data']
         if len(data) == 0:
             continue
