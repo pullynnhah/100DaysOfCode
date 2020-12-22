@@ -1,9 +1,9 @@
+import pprint
 import datetime as dt
 import data_manager as dm
 import flight_search as fs
 import flight_data as fd
 import notification_manager as nm
-
 
 DEPARTURE_IATA = 'LON'
 SIX_MONTHS_IN_DAYS = 180
@@ -28,8 +28,7 @@ flight_params = {
     'flight_type': 'round',
     'one_for_city': 1,
     'adults': 1,
-    'curr': 'GBP',
-    'max_stopovers': 0
+    'curr': 'GBP'
 }
 
 data_manager = dm.DataManager(dm.ENDPOINT, dm.SHEET, dm.TOKEN)
@@ -50,11 +49,19 @@ iata_codes = [row['iataCode'] for row in data_manager.data['prices']]
 
 notification_manager = nm.NotificationManager(nm.ACCOUNT_SID, nm.AUTH_TOKEN)
 for idx, iata_code in enumerate(iata_codes):
-    flight_params.update(fly_to=iata_code)
-    flight_search = fs.FlightSearch(fs.API_SEARCH, fs.ENDPOINT, flight_params, headers)
+    flight_params.update(fly_to=iata_code, max_stopovers=0)
+    flight_search = fs.FlightSearch(fs.API_SEARCH, fs.ENDPOINT, flight_params)
     data = flight_search.data['data']
+    stopped = False
     if len(data) == 0:
-        continue
+        flight_params.update(max_stopovers=1)
+        flight_search = fs.FlightSearch(fs.API_SEARCH, fs.ENDPOINT, flight_params)
+        pp = pprint.PrettyPrinter(indent=4)
+        pp.pprint(flight_search.data['data'])
+        data = flight_search.data['data']
+        if len(data) == 0:
+            continue
+        stopped = True
     flight_data = fd.FlightData(data)
     if flight_data.data['price'] <= data_manager.data['prices'][idx]['lowestPrice']:
         data = flight_data.formatted_data
@@ -62,4 +69,6 @@ for idx, iata_code in enumerate(iata_codes):
         message += f'\nOnly £{data["price"]:.2f} to fly'
         message += f'\nfrom {data["from"]} to {data["to"]},'
         message += f'\nfrom {data["departure_date"]} to {data["arrival_date"]}.'
+        if stopped:
+            message += f'\n\nFlight has 1 stop over, via {data["via_city"]}.'
         notification_manager.send_message(nm.TWILIO_NUMBER, nm.MY_NUMBER, message)

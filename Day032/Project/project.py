@@ -27,7 +27,7 @@ for person in info:
 
 if len(birthday_info) != 0:
 
-    email = os.environ["MY_EMAIL"]
+    my_email = os.environ["MY_EMAIL"]
     password = os.environ["MY_EMAIL_PASSWORD"]
     for person in birthday_info:
         name = person[0]
