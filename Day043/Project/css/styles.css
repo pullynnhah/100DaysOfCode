@@ -1,0 +1,31 @@
+/******************************* TAG SELECTORS *******************************/
+body {
+    background-color: chocolate;
+}
+h1 {
+    color: white;
+    font-size: 100px;
+}
+
+p {
+    color: wheat;
+    font-size: 25px;
+}
+table {
+    border-spacing: 50px;
+}
+/*************************** CLASS SELECTORS *********************************/
+
+.mm {
+    height: 400px;
+}
+
+.beans {
+    height: 200px;
+}
+
+/*************************** ID SELECTORS *********************************/
+
+#header {
+    color: aqua;
+}

@@ -1,6 +1,6 @@
 # 100 Days of Code
 ___
-## Current @: `Day 43`
+## Current @: `Day 44`
 ___
 ### Please, take a look at the notes in the bottom.
 ___
